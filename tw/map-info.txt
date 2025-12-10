@@ -1,0 +1,1028 @@
+;#####################################################
+;## general information/instructions
+;#####################################################
+
+;## purpose of this file
+	;## the script uses this file to detect specific word patterns in data that was copied from the game-client in order to extract information
+	;## these patterns used to be hard-coded for English only, but they are now exposed in this txt-file and can be adapted to new target languages
+
+
+;## file structure
+	;## the script ignores TABs, empty lines, as well as lines/sections marked as comments (;##)
+	;## the file is divided into [sections]: don't change them unless stated otherwise
+	;## each non-comment line in this file is a key/value pair, divided into two parts:
+		;##	key		=	value
+		;## some keys don't require a value
+
+
+;## these keys are map-names as they are displayed at the top of map-items
+;## these pairs are used to trim overly long names: if the key (partially) matches the item's name, the value will replace it
+;## replace the keys with the corresponding in-game strings of the target language, then create a trimmed value
+
+[Map Names]
+Maven's Invitation: The Feared		=	The Feared
+Maven's Invitation: The Forgotten	=	The Forgotten
+Maven's Invitation: The Formed		=	The Formed
+Maven's Invitation: The Hidden		=	The Hidden
+Maven's Invitation: The Twisted		=	The Twisted
+Maven's Invitation: The Elderslayers	=	The Elderslayers
+Maven's Invitation: The Atlas		=	Atlas Invitation
+Expedition Logbook			=	Logbook
+探險日誌							=	Logbook
+
+;## map-mods will be grouped into these 5 categories
+;## do not translate these here or in the map-mods section further below
+
+[mod types]
+player
+monsters
+bosses
+area
+heist
+
+
+;## these are the different expedition groups/clans as they are displayed in the game, as well as the corresponding NPCs
+;## replace only the key (left of the equal-sign) with the corresponding strings of the target language
+
+[expedition groups]
+black scythe mercenaries	=	tujen
+order of the chalice		=	rog
+druids of the broken circle	=	gwennen
+knights of the sun		=	dannig
+
+黑鐮傭兵	=	tujen
+聖杯之序		=	rog
+破碎環之德魯伊	=	gwennen
+豔陽騎士		=	dannig
+
+;## these are the different areas that can roll on logbooks
+;## replace the keys with the corresponding strings of the target language
+
+[expedition areas]
+battleground graves
+烽火墳墓
+bluffs
+陡岸峭壁
+cemetery
+晨曦墓地
+desert ruins
+沙漠廢墟
+dried riverbed
+乾枯河床
+forest ruins
+森林遺跡
+karui wargraves
+卡魯戰爭墓地
+mountainside
+迷黯山腰
+rotting temple
+腐朽神殿
+sarn slums
+薩恩貧民窟
+scrublands
+灌木叢
+shipwreck reef
+沉船岩礁
+utzaal outskirts
+奧札爾郊野
+vaal temple
+瓦爾密殿
+volcanic island
+火山島
+
+;## from this point onwards, the [section] will be the strings of map-mods as they are displayed on map-items
+;## replace those strings with the corresponding strings of the target language and use placeholders where applicable
+
+;## each mod belongs to a type (from the five in the [mod types] section above)
+;## do not change the type values
+
+;## each mod has a short text-string that will be used in the map-info panel instead of the full mod-text
+;## %-signs will be replaced by the actual %-roll of the map-mod, e.g. "ele reflect: %" -> "ele reflect: 15%"
+;## try to trim down the text-strings as much as possible in order to keep the map-info panel compact
+
+;## the text-strings between ID 200 and 300 make heavy use of abbreviations because the original mod-text is very long
+
+[unknown mod]			;## do not translate this line
+type	=	area
+text	=	unknown mods:
+ID	=	000
+
+[怪物反射 # 元素傷害]
+type	=	monsters
+text	=	元反: %
+ID	=	001
+
+[怪物反射 # 物理傷害]
+type	=	monsters
+text	=	物反: %
+ID	=	002
+
+[玩家不能回復生命、魔力和能量護盾]
+type	=	player
+text	=	無回
+ID	=	003
+
+[怪物無法被偷取]
+type	=	player
+text	=	無偷
+ID	=	004
+
+[玩家被時空鎖鏈詛咒]
+type	=	player
+text	=	時空鎖鏈
+ID	=	005
+
+[玩家 # 全部最大抗性]
+type	=	player
+text	=	大抗: -%
+ID	=	006
+
+[玩家有 # 更少生命和能量護盾恢復率]
+type	=	player
+text	=	減少回復: %
+ID	=	007
+
+[怪物不能受到詛咒]
+type	=	monsters
+text	=	無咒
+ID	=	008
+
+[傳奇頭目被附身]
+type	=	bosses
+text	=	附身
+ID	=	009
+
+[玩家減少 # 來自技能的非詛咒光環效果]
+type	=	player
+text	=	光環效果: -%
+ID	=	010
+
+[玩家被衰弱詛咒]
+type	=	player
+text	=	衰弱
+ID	=	011
+
+[怪物增加 # 暴擊率|# 怪物暴擊加成]
+type	=	monsters
+text	=	暴率/暴加: +%
+ID	=	012
+
+[傳奇頭目增加 # 傷害|傳奇頭目增加 # 攻擊速度及施放速度]
+type	=	bosses
+text	=	傷害/速度: +%
+ID	=	013
+
+[增加 # 怪物傷害]
+type	=	monsters
+text	=	傷害: +%
+ID	=	014
+
+[怪物造成 # 額外物理傷害視為冰冷]
+type	=	monsters
+text	=	物理額外冰: %
+ID	=	015
+
+[怪物造成 # 額外物理傷害視為火焰]
+type	=	monsters
+text	=	物理額外火: %
+ID	=	016
+
+[怪物造成 # 額外物理傷害視為閃電]
+type	=	monsters
+text	=	物理額外電: %
+ID	=	017
+
+[區域內有數道增加 # 承受傷害的感電地面]
+type	=	area
+text	=	感電地面: %
+ID	=	018
+
+[怪物傷害必定造成點燃]
+type	=	monsters
+text	=	點燃
+ID	=	019
+
+[怪物不會被暈眩]
+type	=	monsters
+text	=	免暈
+ID	=	020
+
+[增加 # 怪物移動速度|增加 # 怪物攻擊速度|增加 # 怪物施放速度]
+type	=	monsters
+text	=	怪物速度: +%
+ID	=	021
+
+[monsters have a # chance to cause elemental ailments on hit]
+type	=	monsters
+text	=	e-ailment chance: %
+ID	=	022
+
+[被怪物擊中時中毒]
+type	=	monsters
+text	=	擊中中毒
+ID	=	023
+
+[怪物不能被嘲諷]
+type	=	monsters
+text	=	taunt immune
+ID	=	024
+
+[怪物的攻擊擊中時有 # 機率造成穿刺]
+type	=	monsters
+text	=	穿刺: %
+ID	=	025
+
+[增加怪物 # 範圍效果]
+type	=	monsters
+text	=	範圍效果: +%
+ID	=	026
+
+[區域有數道奉獻地面]
+type	=	area
+text	=	奉獻地面
+ID	=	027
+
+[怪物獲得 # 最大生命的額外最大能量護盾]
+type	=	monsters
+text	=	生命額外ES: %
+ID	=	028
+
+[傳奇頭目增加 # 生命|傳奇頭目增加 # 範圍技能]
+type	=	bosses
+text	=	生命/範圍: +%
+ID	=	029
+
+[# 更多怪物生命]
+type	=	monsters
+text	=	更多生命: %
+ID	=	030
+
+[玩家不能造成曝曬]
+type	=	player
+text	=	無法曝曬
+ID	=	031
+
+[# 怪物物理傷害減免]
+type	=	monsters
+text	=	物理減免: +%
+ID	=	032
+
+[# 怪物的混沌抗性|# 怪物的元素抗性]
+type	=	monsters
+text	=	混/元抗: +%
+ID	=	033
+
+[對怪物的詛咒有 # 更少效果]
+type	=	monsters
+text	=	更少詛咒效果: %
+ID	=	034
+
+[怪物 # 壓抑法術傷害率]
+type	=	monsters
+text	=	法壓: +%
+ID	=	035
+
+[玩家減少 # 格擋率]
+type	=	player
+text	=	減少格擋: %
+ID	=	036
+
+[玩家有 # 更少護甲]
+type	=	player
+text	=	更少護甲: %
+ID	=	037
+
+[玩家 # 防止壓抑法術傷害的總量]
+type	=	player
+text	=	法壓減傷: -%
+ID	=	038
+
+[怪物增加 # 命中值]
+type	=	monsters
+text	=	命中: +%
+ID	=	039
+
+[怪物有 # 機率避免元素異常狀態]
+type	=	monsters
+text	=	元素異常免疫: %
+ID	=	040
+
+[減少 # 怪物承受的暴擊傷害]
+type	=	monsters
+text	=	暴傷減免: %
+ID	=	041
+
+[擊殺敵人將會吸引更強大的怪物登場]
+type	=	monsters
+text	=	超越
+ID	=	042
+
+[玩家身上的增益效果加速 # 失效]
+type	=	player
+text	=	BUFF失效: +%
+ID	=	043
+
+[玩家獲得的藥劑充能減少 #]
+type	=	player
+text	=	藥劑充能: -%
+ID	=	044
+
+[玩家有 # 更少的範圍效果]
+type	=	player
+text	=	更少範圍: %
+ID	=	045
+
+[玩家有 # 更少冷卻時間恢復速度]
+type	=	player
+text	=	冷卻恢復: -%
+ID	=	046
+
+[玩家有 # 更少命中值]
+type	=	player
+text	=	更少命中: %
+ID	=	047
+
+[玩家被脆弱詛咒]
+type	=	player
+text	=	脆弱
+ID	=	048
+
+[玩家被元素要害詛咒]
+type	=	player
+text	=	元素要害
+ID	=	049
+
+[怪物的技能附加 # 次連鎖]
+type	=	monsters
+text	=	連鎖: +
+ID	=	050
+
+[怪物發射 # 額外投射物]
+type	=	monsters
+text	=	投射物: +
+ID	=	051
+
+[怪物有 # 機率避免中毒、穿刺和流血]
+type	=	monsters
+text	=	中毒/穿刺/流血免疫: %
+ID	=	052
+
+[怪物擊中時獲得 1 顆耐力球]
+type	=	monsters
+text	=	擊中耐力球
+ID	=	053
+
+[怪物擊中時獲得 1 顆耐力球]
+type	=	monsters
+text	=	擊中耐力球
+ID	=	053
+
+[怪物擊中時獲得 1 顆狂怒球]
+type	=	monsters
+text	=	擊中狂怒球
+ID	=	054
+
+[怪物擊中時獲得 1 顆暴擊球]
+type	=	monsters
+text	=	擊中暴擊球
+ID	=	055
+
+[怪物擊中時致盲]
+type	=	monsters
+text	=	擊中致盲
+ID	=	056
+
+[怪物攻擊擊中時造成癱瘓]
+type	=	monsters
+text	=	擊中癱瘓
+ID	=	057
+
+[怪物法術擊中時造成阻礙]
+type	=	monsters
+text	=	擊中阻礙
+ID	=	058
+
+[怪物擊中時偷取暴擊、狂怒和耐力球]
+type	=	monsters
+text	=	偷球
+ID	=	059
+
+[地圖含有燃燒地面]
+type	=	area
+text	=	燃燒地面
+ID	=	060
+
+[地圖含有冰緩地面]
+type	=	area
+text	=	冰緩地面
+ID	=	061
+
+[地圖含有腐化地面]
+type	=	area
+text	=	腐化地面
+ID	=	062
+
+[地圖裡的怪物種類被增加了]
+type	=	monsters
+text	=	怪物種類增加
+ID	=	063
+
+[區域含有許多不死生物]
+type	=	monsters
+text	=	不死
+ID	=	064
+
+[區域含有許多海巫和它的召喚物]
+type	=	monsters
+text	=	海巫
+ID	=	065
+
+[區域內有許多日耀神信徒]
+type	=	monsters
+text	=	日耀神信徒
+ID	=	066
+
+[區域含有許多骷髏]
+type	=	monsters
+text	=	骷髏
+ID	=	067
+
+[區域含有許多遠程怪物]
+type	=	monsters
+text	=	遠程怪物
+ID	=	068
+
+[區域內有許多月影神信徒]
+type	=	monsters
+text	=	月影神信徒
+ID	=	069
+
+[區域內有許多奇塔弗的信徒]
+type	=	monsters
+text	=	奇塔弗信徒
+ID	=	070
+
+[區域含有許多人型生物]
+type	=	monsters
+text	=	人型生物
+ID	=	071
+
+[區域含有許多羊男]
+type	=	monsters
+text	=	goatmen
+ID	=	072
+
+[區域內有許多鬼魂]
+type	=	monsters
+text	=	鬼魂
+ID	=	073
+
+[區域含有許多惡魔]
+type	=	monsters
+text	=	惡魔
+ID	=	074
+
+[區域含有許多動物]
+type	=	monsters
+text	=	動物
+ID	=	075
+
+[區域含有大量被創造生物]
+type	=	monsters
+text	=	被創造生物
+ID	=	076
+
+[區域含有許多圖騰]
+type	=	area
+text	=	許多圖騰
+ID	=	077
+
+[地圖含有額外 # 個盜賊流亡者]
+type	=	area
+text	=	盜賊流亡者: +
+ID	=	078
+
+[魔法怪物增加 #]
+type	=	monsters
+text	=	魔法怪物: +%
+ID	=	079
+
+[地圖含有兩個傳奇頭目]
+type	=	bosses
+text	=	雙王
+ID	=	080
+
+[增加 # 稀有怪物的數量]
+type	=	monsters
+text	=	稀有怪物: +%
+ID	=	081
+
+[怪物獲得等同它們 # 物理傷害的額外混沌傷害]
+type	=	monsters
+text	=	物理額外混: %
+ID	=	082
+
+[怪物獲得等同它們 # 物理傷害的額外混沌傷害|怪物擊中時造成凋零 # 秒]
+type	=	monsters
+text	=	物理額外混 | 凋零: 2 秒
+ID	=	082
+
+[此區域玩家 # 瘋癲]
+type	=	player
+text	=	瞻望: %
+ID	=	084
+
+[釋界一次釋放全部頭目]
+type	=	bosses
+text	=	釋放全部頭目
+ID	=	085
+
+[monsters have a # chance ignite, freeze and shock on hit]
+type	=	monsters
+text	=	triple conflux: %
+ID	=	086
+
+[擊中時，怪物有 # 機率點燃、冰凍和感電]
+type	=	monsters
+text	=	元素異常: 20%
+ID	=	086
+
+[怪物的行動速度不能被調整至低於基礎值|怪物的移動速度不能被調整至低於基礎值]
+type	=	monsters
+text	=	免疫緩速
+ID	=	087
+
+[區域裡有許多瓦爾人|區域中掉落的物品有 # 機率為已汙染]
+type	=	area
+text	=	腐化掉落: %
+ID	=	088
+
+[稀有怪物死亡時有 # 機率破裂]
+type	=	monsters
+text	=	稀有怪物破裂: %
+ID	=	089
+
+[玩家減少 # 最大總生命、魔力和偷取每秒能量護盾恢復]
+type	=	player
+text	=	減少偷取: %
+ID	=	090
+
+[玩家被脆弱詛咒|玩家被時空鎖鏈詛咒|玩家被元素要害詛咒]
+type	=	player
+text	=	脆弱 | 時空鎖鏈 | 元素要害
+ID	=	158
+
+[增加 # 稀有怪物的數量|每個稀有怪物有 # 個額外詞綴]
+type	=	monsters
+text	=	稀有怪物 | 額外詞綴
+ID	=	159
+
+[區域內含有溺水石]
+type	=	area
+text	=	溺水石
+ID	=	160
+
+[釋界干擾玩家]
+type	=	player
+text	=	釋界干擾
+ID	=	161
+
+[區域內含有灼烙總督符文]
+type	=	area
+text	=	灼烙總督符文
+ID	=	162
+
+[怪物身上的減益效果消逝加速 #]
+type	=	monsters
+text	=	減益消逝: +%
+ID	=	163
+
+[地圖頭目伴隨著 1 個追憶頭目]
+type	=	bosses
+text	=	增加 1 個追憶頭目
+ID	=	164
+
+[玩家的召喚物減少 # 攻擊速度|玩家的召喚物減少 # 施放速度|玩家的召喚物減少 # 移動速度]
+type	=	player
+text	=	減少召喚物速度: %
+ID	=	165
+
+[根據每個附近的盟友，區域內玩家承受傷害增加 #]
+type	=	player
+text	=	承傷每個友方: +%
+ID	=	166
+
+[rare and unique monsters spawn a tormented spirit on reaching low life]
+type	=	monsters
+text	=	ll rare+ spawn spirits
+ID	=	167
+
+[玩家圖騰受到攻擊時承受傷害的 # 改由召喚者承受]
+type	=	player
+text	=	承受圖騰傷害: %
+ID	=	168
+
+[區域含有數道喚醒者的荒蕪]
+type	=	area
+text	=	賽垃圾
+ID	=	169
+
+[玩家投擲地雷的技能可以投擲的數量減少 # 顆地雷|玩家投擲陷阱的技能可以投擲的數量減少最多 # 個陷阱]
+type	=	player
+text	=	地雷/陷阱: -
+ID	=	170
+
+[區域內含有不穩定的惡魔觸手]
+type	=	area
+text	=	惡魔觸手
+ID	=	171
+
+[players have # to maximum number of summoned totems]
+type	=	player
+text	=	max totems: -
+ID	=	172
+
+[近期玩家每次使用 1 個技能，減少 # 行動速度]
+type	=	player
+text	=	行動速度每個技能: -%
+ID	=	173
+
+[區域內的稀有怪物為塑界者之觸]
+type	=	monsters
+text	=	稀有怪為塑界者之觸
+ID	=	174
+
+[怪物傷害穿透 # 元素抗性]
+type	=	monsters
+text	=	元穿: %
+ID	=	175
+
+[怪物的攻擊擊中時造成穿刺|當玩家被施加第 5 層穿刺時，移除穿刺並將物理傷害乘以其剩餘層數的傷害，反射給該玩家及其 # 公尺內的友方]
+type	=	monsters
+text	=	穿刺 | 5 層擴散
+ID	=	176
+
+[monsters' attacks impale on hit|when a fifth impale is inflicted on a player, impales are removed to reflect their physical damage multiplied by their remaining hits to that player and their allies within # metres]
+type	=	monsters
+text	=	impale | 5 stacks pop
+ID	=	176
+
+[稀有與傳奇怪物被擊中時，玩家和召喚物的生命、魔力和能量護盾減少 #]
+type	=	monsters
+text	=	稀有怪移除HP/MP/ES: %
+ID	=	177
+
+[玩家受到死亡印記，持續 # 秒|擊殺 1 隻稀有或傳奇怪物後]
+type	=	player
+text	=	死亡印記
+ID	=	178
+
+[全部怪物傷害可以點燃、冰凍和感電|擊中時，怪物點燃、冰凍和感電]
+type	=	monsters
+text	=	必定元素異常
+ID	=	179
+
+[玩家不能格擋|玩家不能壓抑法術傷害]
+type	=	player
+text	=	不能格擋/法壓
+ID	=	180
+
+[玩家不能充能能量護盾|玩家不能回復生命、魔力和能量護盾]
+type	=	player
+text	=	無回/無回ES
+ID	=	181
+
+[玩家的防禦減少 #]
+type	=	player
+text	=	減少防禦: %
+ID	=	182
+
+[減少 # 怪物所受詛咒效果]
+type	=	monsters
+text	=	減少詛咒效果: %
+ID	=	183
+
+[玩家使用藥劑時被隕石瞄準]
+type	=	player
+text	=	藥劑隕石瞄準
+ID	=	184
+
+[玩家受到血漬鋸刃攻擊]
+type	=	player
+text	=	血漬鋸刃
+ID	=	185
+
+[玩家不能獲得耐力球|玩家不能獲得狂怒球|玩家不能獲得暴擊球]
+type	=	player
+text	=	不能得球
+ID	=	186
+
+[區域含有額外 # 組高度易爆木桶]
+type	=	area
+text	=	易爆木桶: +
+ID	=	187
+
+[怪物獲得 # 物理傷害的額外 1 個隨機元素傷害]
+type	=	monsters
+text	=	物理額外元素: %
+ID	=	188
+
+[區域內含有石化雕像]
+type	=	area
+text	=	石化雕像
+ID	=	189
+
+[稀有怪物擁有核息]
+type	=	monsters
+text	=	稀有怪核息
+ID	=	190
+
+[傳奇怪物有 1 個隨機神殿效果]
+type	=	monsters
+text	=	傳奇怪物神殿
+ID	=	191
+
+[怪物擊中時造成 # 層緩速藤蔓]
+type	=	monsters
+text	=	緩速藤蔓
+ID	=	192
+
+[怪物 # 攻擊傷害格擋率]
+type	=	monsters
+text	=	攻擊格擋: +%
+ID	=	193
+
+[被怪物擊中時中毒|來自怪物擊中的所有傷害都可造成中毒|怪物增加 # 中毒持續時間]
+type	=	monsters
+text	=	中毒/持續時間
+ID	=	194
+
+[怪物耐力球上限 #|怪物擊中時獲得 1 顆耐力球]
+type	=	monsters
+text	=	擊中耐力球 | +上限
+ID	=	195
+
+[怪物耐力球上限 #|怪物擊中時獲得 1 顆耐力球]
+type	=	monsters
+text	=	擊中耐力球 | +上限
+ID	=	195
+
+[怪物狂怒球上限 #|怪物擊中時獲得 1 顆狂怒球]
+type	=	monsters
+text	=	擊中狂怒球 | +上限
+ID	=	196
+
+[怪物暴擊球上限 #|怪物擊中時獲得 1 顆暴擊球]
+type	=	monsters
+text	=	擊中暴擊球 | +上限
+ID	=	197
+
+[每 # 秒玩家和其召喚物有 # 秒不會造成傷害]
+type	=	player
+text	=	無傷害間隔
+ID	=	198
+
+[區域中所有魔法和普通怪物全都在 1 個聚魂中]
+type	=	monsters
+text	=	聚魂
+ID	=	199
+
+[怪物的技能附加 # 次連鎖|當怪物的投射物撞擊地面時連鎖]
+type	=	monsters
+text	=	(地面) 連鎖: +
+ID	=	200
+
+[怪物擊中時有 # 機率獲得 1 顆狂怒球]
+type	=	monsters
+text	=	擊中狂怒球: %
+ID	=	201
+
+[怪物擊中時有 # 機率獲得 1 顆耐力球]
+type	=	monsters
+text	=	擊中耐力球: %
+ID	=	202
+
+[怪物擊中時有 # 機率獲得 1 顆暴擊球]
+type	=	monsters
+text	=	擊中暴擊球: %
+ID	=	203
+
+[每 # 警戒等級，玩家有 # 更少能量護盾恢復率]
+type	=	player
+text	=	更少es恢復每警戒: %
+ID	=	204
+
+[每 # 警戒等級，玩家有 # 更少生命恢復率]
+type	=	player
+text	=	更少生命恢復每警戒: %
+ID	=	205
+
+[每 # 警戒等級，玩家有 # 更少魔力恢復率]
+type	=	player
+text	=	更少魔力恢復每警戒: %
+ID	=	206
+
+[巡守群增加 # 機率被菁英巡守群取代]
+type	=	monsters
+text	=	菁英巡守群: +%
+ID	=	207
+
+[巡守怪物增加 # 傷害]
+type	=	monsters
+text	=	巡守群傷害: +%
+ID	=	208
+
+[巡守群減少承受 #% 傷害]
+type	=	monsters
+text	=	巡守群減傷: -%
+ID	=	209
+
+[獎勵房怪物增加 # 傷害]
+type	=	monsters
+text	=	獎勵房怪物傷害: +%
+ID	=	210
+
+[每 # 警戒等級 # 玩家抗性]
+type	=	player
+text	=	大抗每警戒: -%
+ID	=	211
+
+[獎勵房怪物減少承受 # 傷害]
+type	=	monsters
+text	=	獎勵房怪物減傷: -%
+ID	=	212
+
+[守衛增加 # 傷害]
+type	=	monsters
+text	=	守衛傷害: +%
+ID	=	213
+
+[守衛減少 # 承受傷害]
+type	=	monsters
+text	=	守衛減傷: -%
+ID	=	214
+
+[減少 # 工作速度]
+type	=	heist
+text	=	工作速度: -%
+ID	=	215
+
+[獎勵房增加 # 怪物]
+type	=	monsters
+text	=	獎勵房怪物: +%
+ID	=	216
+
+[每 # 警戒等級，玩家減少 # 藥劑充能]
+type	=	player
+text	=	減少藥劑每警戒: -%
+ID	=	217
+
+[支援增加 #% 攻擊速度|支援增加 # 施放速度|支援增加 # 移動速度]
+type	=	monsters
+text	=	支援速度: +%
+ID	=	218
+
+[達到警戒等級上限時，立刻封鎖]
+type	=	heist
+text	=	警戒上限立刻封鎖
+ID	=	219
+
+[每 # 警戒，等級玩家有 # 更少護甲]
+type	=	player
+text	=	更少護甲每警戒: -%
+ID	=	220
+
+[每 # 警戒等級，玩家有 # 更少閃避]
+type	=	player
+text	=	更少閃避每警戒: -%
+ID	=	221
+
+[增加 # 總計劫盜費用]
+type	=	heist
+text	=	劫盜費用: +%
+ID	=	222
+
+[邪戒不會抽成]
+type	=	heist
+text	=	邪戒不會抽成
+ID	=	223
+
+[沒有旅費]
+type	=	heist
+text	=	沒有旅費
+ID	=	224
+
+[警戒等級每秒增加 #]
+type	=	heist
+text	=	警戒等級每秒: +%
+ID	=	225
+
+[每 # 警戒等級，# 玩家火焰抗性]
+type	=	player
+text	=	火抗每警戒: -%
+ID	=	226
+
+[每 # 警戒等級，# 玩家冰冷抗性]
+type	=	player
+text	=	冰抗每警戒: -%
+ID	=	227
+
+[每 # 警戒等級，# 玩家閃電抗性]
+type	=	player
+text	=	閃抗每警戒: -%
+ID	=	228
+
+[黑鐮傭兵]
+type	=	expedition
+text	=	圖貞
+ID	=	301
+
+[聖杯之序]
+type	=	expedition
+text	=	羅格
+ID	=	302
+
+[破碎環之德魯伊]
+type	=	expedition
+text	=	關南
+ID	=	303
+
+[豔陽騎士]
+type	=	expedition
+text	=	丹尼格
+ID	=	304
+
+[區域增加 # 遺跡數量]
+type	=	expedition
+text	=	遺跡數量: %
+ID	=	305
+
+[增加 # 爆炸範圍]
+type	=	expedition
+text	=	爆炸範圍: +%
+ID	=	306
+
+[增加 # 爆炸數量]
+type	=	expedition
+text	=	爆炸數量: +%
+ID	=	307
+
+[發掘的保險箱有 # 機率含有 2 倍的物品]
+type	=	expedition
+text	=	2x 保險箱獎勵機率: %
+ID	=	308
+
+[遺跡有 # 機率有 1 個額外後綴]
+type	=	expedition
+text	=	遺跡額外後綴: %
+ID	=	309
+
+[增加 # 爆裂物放置範圍]
+type	=	expedition
+text	=	爆裂物放置範圍: +%
+ID	=	310
+
+[區域增加 # 怪物標記的數量]
+type	=	expedition
+text	=	怪物標記數量: +%
+ID	=	311
+
+[區域含有 1 個額外地下區域]
+type	=	expedition
+text	=	額外地下區域
+ID	=	312
+
+[區域增加 # 魔符怪物標記的數量]
+type	=	expedition
+text	=	魔符標記數量: +%
+ID	=	313
+
+[區域含有 # 個額外保險箱標記]
+type	=	expedition
+text	=	保險箱標記: +
+ID	=	314
+
+[增加 # 怪物掉落文物的數量]
+type	=	expedition
+text	=	文物掉落: +%
+ID	=	315
+
+[區域含有墮落英雄．梅德偉]
+type	=	expedition
+text	=	梅德偉 (王)
+ID	=	316
+
+[區域含有最後生還．沃拉娜]
+type	=	expedition
+text	=	沃拉娜 (王)
+ID	=	317
+
+[區域含有貪婪叛徒．烏特雷]
+type	=	expedition
+text	=	烏特雷 (王)
+ID	=	318
+
+[區域含有失落起源．奧爾羅斯]
+type	=	expedition
+text	=	奧爾羅斯 (王)
+ID	=	319

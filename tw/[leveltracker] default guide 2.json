@@ -1,0 +1,777 @@
+[
+  [
+    [
+      "击杀 arena:浮肿米勒",
+      "进入 areaidg1_town ;; clearfell encampment"
+    ],
+    [
+      "(img:quest_2) 伦利: (img:skill) || 进入 areaidg1_2 ;; clearfell"
+    ],
+    [
+      "可选： (img:skill) 在 (color:cc99ff)神秘營區",
+      "可选： (img:skill) (img:support) arena:吞噬兽 在 (img:checkpoint) areaidg1_3 ;; mud burrow",
+      "(hint)__ 然后: (img:portal) 回家 (img:quest_2) 伦利 || (img:waypoint)  传送至 areaidg1_2 ;; clearfell",
+      "击杀 (img:checkpoint) 腐敗獸群．貝伊拉 得到 <quest:凜冬狼的頭顱>",
+      "进入 (img:checkpoint) areaidg1_4 ;; the grelwood"
+    ],
+    [
+      "(color:ff00ff)两个任务: 得到 (img:waypoint) _|| (img:in-out2) areaidg1_6 for (img:waypoint) ;; the grim tangle",
+      "(hint)__ diamond-shape: 找到 (img:checkpoint) / (img:waypoint) 用于传送",
+      "可选： (img:skill) arena:荊棘懼怪 || (img:support) <忘卻女巫．阿瑞涅> & 药水 在 (img:checkpoint) (color:cc99ff)女巫小屋",
+      "进入 (img:checkpoint) areaidg1_5 (通常在 arena:荊棘懼怪 附近) ;; the red vale"
+    ],
+    [
+      "清理 (quest:3个方尖塔) 得到 (quest:3个符文)",
+      "(img:portal) 回家 areaidg1_town ;; clearfell encampment"
+    ],
+    [
+      "(img:quest_2) 伦利: (quest:魔符尖刺)",
+      "(img:waypoint) 传送去 areaidg1_4 ;; the grelwood"
+    ],
+    [
+      "破坏 (color:cc99ff)三个符文封印",
+      "(img:portal) 回家 areaidg1_town ;; clearfell encampment"
+    ],
+    [
+      "(img:quest_2) 乌娜",
+      "(img:waypoint) 传送去 areaidg1_6 ;; the grim tangle"
+    ],
+    [
+      "可选： (img:support) arena:腐敗的德魯伊",
+      "进入 (img:checkpoint) areaidg1_7 ;; cemetery of the eternals"
+    ],
+    [
+      "激活 (img:waypoint) 和 (img:checkpoint)",
+      "可选： (img:ring) 在 (img:checkpoint) (color:cc99ff)古老遺跡 (edge)",
+      "进入 (img:checkpoint) areaidg1_9 ;; tomb of the consort"
+    ],
+    [
+      "可选： (img:support) <永恆騎士> 在 (img:checkpoint) (color:cc99ff)寶庫",
+      "击杀 (img:checkpoint) 政務官配偶．阿席妮雅 得到 (quest:回忆碎片)",
+      "进入 areaidg1_7 ;; cemetery of the eternals"
+    ],
+    [
+      "可选： (img:ring) 在 (img:checkpoint) (color:cc99ff)古老遺跡 (edge)",
+      "进入 (img:checkpoint) areaidg1_8 ;; mausoleum of the praetor"
+    ],
+    [
+      "击杀 (img:checkpoint) 永恆政務官．德雷文 (quest:回忆碎片)",
+      "进入 areaidg1_7 ;; cemetery of the eternals"
+    ],
+    {
+      "condition": [
+        "league-start",
+        "yes"
+      ],
+      "lines": [
+        "(img:checkpoint) -传送去 (img:waypoint), 打开 (color:cc99ff)大门",
+        "(hint)__ 当打开大门, esc: (color:cc99ff)记录点重生以跳过对话",
+        "击杀 無盡悲歌的拉克朗 得到 (quest:戒指)",
+        "进入 areaidg1_11 ;; hunting grounds"
+      ]
+    },
+    {
+      "condition": [
+        "league-start",
+        "no"
+      ],
+      "lines": [
+        "(img:checkpoint) -传送去 (img:waypoint), 打开 (color:cc99ff)大门",
+        "(hint)__ 当打开大门, esc: (color:cc99ff)记录点重生以跳过对话",
+        "击杀 無盡悲歌的拉克朗 || 离开 (quest:戒指)",
+        "进入 areaidg1_11 ;; hunting grounds"
+      ]
+    },
+    [
+      "沿边走 (color:ff00ff)两个任务:",
+      "(hint)_ - 击杀 (img:checkpoint)鴉鈴  得到 (quest:天赋书)",
+      "(hint)_ - (img:in-out2) areaidg1_13_1 激活 (img:waypoint) ;; ogham farmlands",
+      "可选： (img:support) (color:cc99ff)樹靈祭祀 || (img:skill) (color:cc99ff)祭祀神壇",
+      "沿边走 (img:checkpoint) areaidg1_12 ;; freythorn"
+    ],
+    [
+      "清理3小1大 (img:checkpoint) (color:cc99ff)祭祀神壇",
+      "(hint)__ 如果你先找到了大的, 激活",
+      "(hint)__ 会指向未找到的",
+      "(img:portal) 回家 areaidg1_town ;; clearfell encampment"
+    ],
+    {
+      "condition": [
+        "league-start",
+        "yes"
+      ],
+      "lines": [
+        "(img:quest_2) 乌娜: (quest:黑衣幽魂)",
+        "(img:quest_2) 費恩: (color:cc99ff)自选护符",
+        "(img:waypoint) 传送去 areaidg1_13_1 ;; ogham farmlands"
+      ]
+    },
+    {
+      "condition": [
+        "league-start",
+        "no"
+      ],
+      "lines": [
+        "(img:waypoint) 传送去 areaidg1_13_1 ;; ogham farmlands"
+      ]
+    },
+    [
+      "找到 (img:checkpoint) (color:cc99ff)小屋 / (quest:丢失的鲁特琴)",
+      "(hint)__ 绕过潜在的障碍",
+      "可选： (img:skill): 找到 & 清理 (img:checkpoint) (color:cc99ff)麥田圈",
+      "找到路 (img:checkpoint) areaidg1_13_2 ;; ogham village"
+    ],
+    [
+      "(img:waypoint) 回家 areaidg1_town (img:town) ;; clearfell encampment"
+    ],
+    [
+      "(img:quest_2) 乌娜: (quest:天赋书)",
+      "(img:waypoint) 传送去 areaidg1_13_2 ;; ogham village"
+    ],
+    {
+      "condition": [
+        "league-start",
+        "yes"
+      ],
+      "lines": [
+        "找到 (img:checkpoint) (color:cc99ff)伦利的工匠坊: (quest:鍛造工具) & <鐵匠箱子>",
+        "找到 & 击杀 (img:checkpoint) 劊子手",
+        "(img:quest_2) 蕾堤絲 || 进入 areaidg1_14 ;; the manor ramparts"
+      ]
+    },
+    {
+      "condition": [
+        "league-start",
+        "no"
+      ],
+      "lines": [
+        "可选： (color:cc99ff)空白符文 & (img:artificer) 在 (img:checkpoint) (color:cc99ff)伦利的工匠坊",
+        "找到 & 击杀 (img:checkpoint) 劊子手",
+        "(img:quest_2) 蕾堤絲 || 进入 areaidg1_14 ;; the manor ramparts"
+      ]
+    },
+    [
+      "可选： (img:support) (color:cc99ff)绞刑架 在外缘",
+      "靠内的道路通往 areaidg1_15 ;; ogham manor"
+    ],
+    {
+      "condition": [
+        "league-start",
+        "yes"
+      ],
+      "lines": [
+        "击杀 (img:checkpoint)  存活儀式．燭光（在第一层） 得到 (quest:燭光精髓)",
+        "(hint)__ 找到下去的路，共三层",
+        "击杀 (img:checkpoint) 吉恩諾伯爵",
+        "回家 areaidg1_town ;; clearfell encampment"
+      ]
+    },
+    {
+      "condition": [
+        "league-start",
+        "no"
+      ],
+      "lines": [
+        "击杀 (img:checkpoint)  存活儀式．燭光（在第一层） 得到 (quest:燭光精髓)",
+        "(hint)__ 找到下去的路，共三层",
+        "击杀 (img:checkpoint) 吉恩諾伯爵",
+        "(img:portal) 回家 areaidg1_town ;; clearfell encampment"
+      ]
+    },
+    {
+      "condition": [
+        "league-start",
+        "yes"
+      ],
+      "lines": [
+        "(img:quest_2) 蕾堤絲: (img:support)",
+        "(img:quest_2) 伦利: (color:cc99ff)符文 & (quest:回收台)",
+        "(img:quest_2) 黑衣幽魂: areaidg2_1 ;; vastiri outskirts"
+      ]
+    },
+    {
+      "condition": [
+        "league-start",
+        "no"
+      ],
+      "lines": [
+        "(img:quest_2) 蕾堤絲: (img:support)",
+        "可选： (img:quest_2) 伦利: (color:cc99ff)符文",
+        "(img:quest_2) 黑衣幽魂: areaidg2_1 ;; vastiri outskirts"
+      ]
+    }
+  ],
+  [
+    [
+      "沿边走, 找到 长通道",
+      "击杀 (img:checkpoint) 撕裂者 || (img:portal) 回家",
+      "(img:quest_2) 札卡: (img:skill) || 进入 areaidg2_town ;; the ardura caravan"
+    ],
+    [
+      "(img:quest_2) 黑衣幽魂 || (img:quest_2) 絲克瑪．阿薩拉",
+      "(color:cc99ff)沙漠地圖: areaidg2_10_1 ;; mawdun quarry"
+    ],
+    [
+      "可选： (img:artificer) 在 (img:checkpoint) (color:cc99ff)法里登戰爭密盒 (边缘)",
+      "找到 & 进入 (img:checkpoint) areaidg2_10_2 ;; mawdun mine"
+    ],
+    [
+      "击杀 恐懼工程師．魯賈 || 释放 (img:quest_2) 芮蘇",
+      "(hint)__ (img:checkpoint) (color:cc99ff)竞技场 通常在 (img:0) / (img:1)",
+      "(img:portal) 回家 areaidg2_town ;; the ardura caravan"
+    ],
+    [
+      "(img:quest_2) 芮蘇",
+      "(color:cc99ff)沙漠地圖: areaidg2_3a ;; the halani gates (blocked)"
+    ],
+    [
+      "(img:quest_2) 絲克瑪．阿薩拉",
+      "回家 areaidg2_town ;; the ardura caravan"
+    ],
+    [
+      "(img:quest_2) 芮蘇 || (img:quest_2) 絲克瑪．阿薩拉",
+      "(color:cc99ff)沙漠地圖: areaidg2_2 ;; traitor's passage"
+    ],
+    [
+      "击杀 (img:checkpoint) 芭芭拉 (quest:巨靈之幣（第一次升华）)",
+      "(hint)__ 揭开纸张",
+      "进入 (img:checkpoint) areaidg2_3 ;; the halani gates"
+    ],
+    [
+      "跟随山谷, 击杀 崛起之王．賈嫚拉",
+      "下 (img:arena) 楼梯, 走到沙暴尽头直到触发对话",
+      "(img:portal) 回家 areaidg2_town ;; the ardura caravan"
+    ],
+    [
+      "(img:quest_2) 札卡: (img:skill)",
+      "(color:cc99ff)沙漠地圖: areaidg2_13 ;; trial of the sekhemas"
+    ],
+    [
+      "激活 (img:waypoint)",
+      "(hint)_ - (quest:阿森西翁) 将(quest:巨靈之幣)放入装置",
+      "(hint)_ - 自己决定现在打或者后面再来",
+      "(img:waypoint) 传送去 areaidg2_town (img:town) ;; the ardura caravan"
+    ],
+    [
+      "(img:quest_2) 絲克瑪．阿薩拉",
+      "(color:cc99ff)沙漠地圖: areaidg2_4_1 ;; keth"
+    ],
+    [
+      "(color:ff00ff)两个目标: (color:cc99ff)蛇人 (color:lime)(卡巴拉部落聖物) || (img:checkpoint) arena:異界．干擾女王．卡巴拉 (color:lime)(天赋书)",
+      "可选： (color:66b2ff)护符 在 两个(img:arena)楼梯之一",
+      "沿边走, 找到 桥 通往 areaidg2_4_2 ;; the lost city"
+    ],
+    [
+      "可选： (img:spirit) 在 (img:checkpoint) (color:cc99ff)耀金墓室 || (color:66b2ff)珠宝 掉落自 <圣甲虫>",
+      "找到 & 进入 (img:checkpoint) areaidg2_4_3 ;; buried shrines",
+      "(hint)_ - 第一条走廊显示大致方向",
+      "(hint)_ - 沿边缘找到 (img:checkpoint) (color:aqua)v形桥"
+    ],
+    [
+      "可选： (color:66b2ff)选择 (img:ring) 在 (img:checkpoint) (color:cc99ff)元素神殿",
+      "找到 (img:arena) 凯斯之心, 击杀 遺忘之子．阿薩里恩",
+      "(img:quest_2) halani: (quest:無盡熾炎) || (img:quest_2) halani: (quest:水之精髓)",
+      "(img:portal) 回家 areaidg2_town ;; the ardura caravan"
+    ],
+    [
+      "(img:quest_2) 札卡: (img:support)",
+      "(color:cc99ff)沙漠地圖: areaidg2_5_1 ;; mastodon badlands"
+    ],
+    [
+      "可选： (img:support) 在 (img:checkpoint) (color:cc99ff)fossilized_memorial",
+      "找到 & 进入 (img:checkpoint) areaidg2_5_2 ;; the bone pits"
+    ],
+    [
+      "(color:ff00ff)两个目标: (color:cc99ff)土狼 (color:lime)(太陽部落聖物) || arena:遠古之蹄．埃克巴勃 (color:lime)(乳齒象象牙)",
+      "(hint)_ - 起始区域为月牙形",
+      "(hint)_ - arena:boss房 在 (color:aqua)shape: check (img:checkpoint)的一边",
+      "(img:portal) 回家 areaidg2_town ;; the ardura caravan"
+    ],
+    [
+      "(img:quest_2) 札卡: (img:support)",
+      "(color:cc99ff)沙漠地圖: areaidg2_6 ;; valley of the titans"
+    ],
+    [
+      "(color:ff00ff)两个目标 分别在内外边:",
+      "(hint)_ - 激活 (quest:3个) (img:checkpoint) (quest:古代封印)",
+      "(hint)_ - 找到 (img:waypoint): 放入 (quest:圣物) ",
+      "找到 & 进入 (img:checkpoint) areaidg2_7 ;; the titan grotto"
+    ],
+    [
+      "击杀 巨像．札爾瑪拉斯 得到 (quest:火焰紅寶石)",
+      "(img:portal) 回家 areaidg2_town ;; the ardura caravan"
+    ],
+    [
+      "(img:quest_2) 札卡: (img:support), (quest:horn) || (img:quest_2) 絲克瑪．阿薩拉",
+      "(color:cc99ff)沙漠地圖: areaidg2_2 ;; traitor's passage",
+      "(img:quest_2) (color:cc99ff)吹响号角",
+      "(img:quest_2) 絲克瑪．阿薩拉 || (color:cc99ff)沙漠地圖: areaidg2_8 ;; deshar"
+    ],
+    [
+      "可选： (img:artificer) (color:cc99ff)骨架双boss: 在外缘(img:checkpoint)附近",
+      "找到 (quest:遗书) 在 (img:quest_2) (quest:战死的部下)",
+      "(hint)__ 搜索塔的周围",
+      "进入 (img:checkpoint) areaidg2_9_1 ;; path of mourning"
+    ],
+    [
+      "进入 (img:checkpoint) areaidg2_9_2 ;; the spires of deshar"
+    ],
+    [
+      "(color:ff00ff)两个目标: (color:cc99ff)姐妹雕像 || arena:玷汙者托爾．谷爾",
+      "(hint)_ - (img:checkpoint) (color:cc99ff)雕像: 地图上的g型",
+      "(hint)_ - (img:checkpoint) arena:玷汙者托爾．谷爾: 区域的远端",
+      "(img:portal) 回家 areaidg2_town ;; the ardura caravan"
+    ],
+    [
+      "把 (quest:遗书) 交给 夏布林: (quest:天赋书)",
+      "(img:quest_2) 絲克瑪．阿薩拉",
+      "(color:cc99ff)沙漠地圖: areaidg2_12_1 ;; the dreadnought"
+    ],
+    [
+      "进入 areaidg2_12_2 ;; dreadnought vanguard"
+    ],
+    [
+      "击杀 憎惡者．賈嫚拉 || (img:quest_2) 絲克瑪．阿薩拉",
+      "(img:portal) 回家 areaidg2_town ;; the ardura caravan"
+    ],
+    [
+      "从车队中间下车直走到头与 (img:7): (img:quest_2) 黑衣幽魂 对话",
+      "(img:quest_2) 絲克瑪．阿薩拉: areaidg3_1 ;; sandswept marsh"
+    ]
+  ],
+  [
+    [
+      "可选： (img:skill) arena:根淤 || (img:ring) (color:cc99ff)吊樹",
+      "可选： (img:jeweller) 在 (img:checkpoint) (color:cc99ff)歐洛克營火 出口附近",
+      "进入 (img:checkpoint) areaidg3_town ;; ziggurat encampment"
+    ],
+    {
+      "condition": [
+        "league-start",
+        "yes"
+      ],
+      "lines": [
+        "(img:quest_2) 奧斯瓦德",
+        "进入 areaidg3_3 ;; jungle ruins"
+      ]
+    },
+    {
+      "condition": [
+        "league-start",
+        "no"
+      ],
+      "lines": [
+        "进入 areaidg3_3 ;; jungle ruins"
+      ]
+    },
+    [
+      "(color:ff00ff)两个任务: 找到 (img:waypoint) || 击杀 (img:checkpoint) 神威銀拳: (quest:天赋书)",
+      "(hint)_ arena:神威銀拳 : 在围起来的方形中，伤害极高",
+      "可选： <生皮腰帶/麻布腰帶>: (img:checkpoint) (color:cc99ff)叢林墓園",
+      "沿着边缘走到 (img:checkpoint) areaidg3_2_1 ;; infested barrens"
+    ],
+    [
+      "找到 (img:waypoint) || (color:ff00ff)沿水道边缘的两个任务:",
+      "(hint)__ (img:in-out2) 出口1 用于获取 (img:waypoint) || 进入 (img:arena) 口2 用于获取 (img:waypoint)",
+      "(img:waypoint) -传送至 areaidg3_3 ;; jungle ruins"
+    ],
+    [
+      "进入 areaidg3_4 ;; the venom crypts"
+    ],
+    [
+      "找到 (img:checkpoint) (quest:尸体) for (quest:屍蛇毒液)",
+      "(hint)__  要么在外缘，要么在中心",
+      "(img:portal) 回家 areaidg3_town ;; ziggurat encampment"
+    ],
+    [
+      "(img:quest_2) 瑟維: (color:lime)永久增益 & (img:artificer)",
+      "(hint)__ 最终选择: (color:ff0000)无法更改",
+      "(img:waypoint) 进入 areaidg3_7 ;; the azak bog"
+    ],
+    [
+      "可选： (img:quest_2) (color:cc99ff)火膚儀式 (暂时增加火抗，方便后续打boss)",
+      "(hint)__ 25% 稀有度/火抗，靠近中心",
+      "击杀 (img:checkpoint) arena:沼澤女巫．尹娜杜克 得到 (quest:两件物品)",
+      "寶石花顱骨：获得30精魂和10级精魂宝石； 尹娜杜克的幽暗長矛：交给瑟維获得护符",
+      "(img:portal) 回家 areaidg3_town (img:town) ;; ziggurat encampment"
+    ],
+    [
+      "(img:quest_2) 瑟維: (color:66b2ff)护符",
+      "(img:waypoint) 进入 areaidg3_5 ;; chimeral wetlands"
+    ],
+    [
+      "(color:ff00ff)沿边缘找到两个目标:",
+      "(hint)_ - (img:checkpoint) areaidg3_10_airlock: (img:in-out2) (color:ffffff)解锁 (img:waypoint) ;; temple of chaos",
+      "(hint)_ - (img:checkpoint) arena:龍蜥．欽路錫安: (quest:龍蜥最後通牒雕刻（第二次升华）) & (img:arena) 出口",
+      "进入 areaidg3_6_1 ;; jiquani's machinarium"
+    ],
+    [
+      "找到 (quest:小型靈魂核心) 解锁 (color:cc99ff)大门 || (quest:2个小型靈魂核心) 解锁:",
+      "(hint)_ - (img:checkpoint) arena:遺忘的黑顎: 侧边边缘的房间，得到(quest:火焰核心 +10%火抗)",
+      "(hint)_ - (img:checkpoint) (color:cc99ff)上锁的出口: 跟随红线",
+      "进入 areaidg3_6_2 ;; jiquani's sanctum"
+    ],
+    [
+      "找到 (quest:2个中型靈魂核心), 启动 (quest:2个發電機)(v字形)",
+      "(hint)__ 然后 (color:cc99ff)esc:_respawn || (img:checkpoint) -传送回起点",
+      "激活  (quest:大型靈魂核心) || 击杀 arena:核心守衛．茲科亞特 for (quest:大型靈魂核心)",
+      "(img:waypoint) 传送至 areaidg3_2_1 ;; infested barrens"
+    ],
+    [
+      "激活 (img:quest_2) (color:cc99ff)水库机关",
+      "进入 areaidg3_2_2 ;; the matlan waterways"
+    ],
+    [
+      "激活 (color:cc99ff)水库闸门放水",
+      "(img:portal) 回家 areaidg3_town ;; ziggurat encampment"
+    ],
+    [
+      "(quest:升华): (img:waypoint) t去o areaidg3_10_airlock ;; temple of chaos",
+      "(hint)__ 将(quest:龍蜥最後通牒雕刻)放入机关，可后续再打",
+      "(img:waypoint) 传送去 areaidg3_town (img:town) ;; ziggurat encampment",
+      "下坡找 (img:3): (img:quest_2) 艾瓦, 进入 areaidg3_8 ;; the drowned city"
+    ],
+    {
+      "condition": [
+        "league-start",
+        "yes"
+      ],
+      "lines": [
+        "(img:in-out2) areaidg3_9 解锁 (img:waypoint) ;; the molten vault",
+        "(hint)_ - 解锁(quest:重铸台) ",
+        "(hint)_ - 可后续再打",
+        "进入 (img:checkpoint) areaidg3_11 ;; apex of filth"
+      ]
+    },
+    {
+      "condition": [
+        "league-start",
+        "no"
+      ],
+      "lines": [
+        "进入 (img:checkpoint) areaidg3_11 ;; apex of filth"
+      ]
+    },
+    [
+      "可选： 品质 药水 在 (img:checkpoint) (color:cc99ff)鍋爐守護者",
+      "(hint)__ 在区域内寻找/拾取 (quest:3色蘑菇)",
+      "击杀 arena:污垢女王 得到 (quest:神殿大門神像)",
+      "(img:portal) 回家 areaidg3_town ;; ziggurat encampment"
+    ],
+    {
+      "condition": [
+        "league-start",
+        "yes"
+      ],
+      "lines": [
+        "(quest:重铸台) & (img:artificer) (也可以稍后做):",
+        "(hint)_ - (img:waypoint) 解锁 areaidg3_9, 击杀 arena:冶煉師範．梅克圖  ;; the molten vault",
+        "(hint)_ - 取得 (quest:卡瑪薩之錘), (img:portal) 回家 || (img:quest_2) 奧斯瓦德",
+        "(img:3): 进入 areaidg3_12 ;; temple of kopec"
+      ]
+    },
+    {
+      "condition": [
+        "league-start",
+        "no"
+      ],
+      "lines": [
+        "go (img:3): 进入 areaidg3_12 ;; temple of kopec"
+      ]
+    },
+    [
+      "找到 角落的 (img:arena) 出口, 击杀 arena:豔陽神聖主教．凱亞祖利",
+      "(img:quest_2) 艾瓦: areaidg3_town ;; ziggurat encampment"
+    ],
+    [
+      "进入  (color:cc99ff)崎點",
+      "走下台階到 areaidg3_14 ;; utzaal"
+    ],
+    [
+      "(color:ff00ff)两个目标: (color:cc99ff)瓦爾巨獸  (color:lime)(犧牲之心) || (img:checkpoint) arena:邪魔毒蛇納普阿茲",
+      "(hint)_ - (quest:犧牲之心) 下一个区域也掉落",
+      "(hint)_ - 战吼声会引向（沿道路前进亦可） arena:邪魔毒蛇納普阿茲",
+      "找到 & 进入 (img:checkpoint) areaidg3_16 ;; aggorat"
+    ],
+    [
+      "找到 广场 和 (img:checkpoint) || 刷取 (quest:犧牲之心)",
+      "使用 (quest:犧牲之心) 在 (img:checkpoint) (color:cc99ff)獻祭講臺",
+      "(hint)__ (img:0) of (color:aqua)plaza, may require detour",
+      "找到 & 进入 (img:checkpoint) areaidg3_17 ;; the black chambers",
+      "(hint)__ 在 (color:cc99ff)血祭 的连线方向上, (img:6) 或 (img:2)"
+    ],
+    [
+      "找到 & 击杀 (img:checkpoint) 皇家奇術師．多里亞尼",
+      "(hint)__ 区域: 由桥梁连接的迷宫",
+      "(img:portal) 回家 areaidg3_town ;; ziggurat encampment"
+    ],
+    [
+      "(img:quest_2) 皇家奇術師．多里亞尼: 过场动画",
+      "(img:quest_2) 皇家奇術師．多里亞尼",
+      "(img:quest_2) 艾瓦: (color:cc99ff)前往 areaidg4_town ;; kingsmarch"
+    ]
+  ],
+  [
+    [
+      "(color:ff0000)0.4通用信息: 第四幕任务 (color:cc99ff)每赛季轮换",
+      "(hint)_ - 3 arena:bosses 持有 (img:quest_2) (quest:武器部件): 主线任务",
+      "(hint)_ - 1 arena:boss 捕获了 (img:quest_2) 馬提奇: areaidg4_4_1 quest ;; eye of hinekora",
+      "(hint)_ - 因此，有些步骤是重复的，并标记有 (?)",
+      "(hint)_ - 为保险起见，包含了一些可能可选的 arena:bosses",
+      "(img:quest_2) 皇家奇術師．多里亞尼 || (img:quest_2) 艾瓦: (quest:船隻特許證) || (img:quest_2) 瑪寇魯: areaidg4_1_1 ;; isle of kin"
+    ],
+    [
+      "可选： (img:skill) (img:support) 在 (img:checkpoint) (color:cc99ff)獸欄",
+      "可选： (img:jeweller) 在 (img:checkpoint) (color:cc99ff)厄命礦坑 || (img:quest_2) (quest:撕碎的地圖碎片): (img:checkpoint) (color:cc99ff)水手",
+      "击杀 (img:checkpoint) 眼盲巨獸 for (quest:天赋书)",
+      "进入 (img:checkpoint) areaidg4_1_2 ;; volcanic warrens"
+    ],
+    [
+      "可选： (color:ff0000)火焰 / (color:ffff00)闪电 (img:ring) 在 (img:checkpoint) (color:cc99ff)火山魔像",
+      "(hint)__ 元素类型基于 (color:cc99ff)击杀类型",
+      "击杀 (img:checkpoint) 金氏領主．克魯托克 || 释放 (img:quest_2) 馬提奇",
+      "(img:quest_2) 瑪寇魯 (船上): areaidg4_2_1 ;; kedge bay"
+    ],
+    [
+      "可选： (img:quest_2) (quest:撕碎的地圖碎片) 在 (img:checkpoint) (color:cc99ff)亡者之箱",
+      "进入 areaidg4_2_2 ;; journey's end"
+    ],
+    [
+      "激活 (img:waypoint) || (img:quest_2) 圖貞",
+      "找到 & 击杀 (img:checkpoint) 哈特林統帥 得到 (quest:維里西姆)",
+      "释放 (img:quest_2) 馬提奇 || (img:portal) 回家 areaidg4_town ;; kingsmarch"
+    ],
+    [
+      "(img:quest_2) 丹尼格: (quest:維里西姆尖矢)",
+      "(img:waypoint) 传送至 areaidg4_2_2 ;; journey's end"
+    ],
+    [
+      "(img:quest_2) 芙雷雅．哈特林 || 击杀 恐懼造物．歐姆弗畢亞",
+      "(img:portal) 回家 areaidg4_town ;; kingsmarch"
+    ],
+    [
+      "(img:quest_2) 圖貞: (img:skill)",
+      "(img:quest_2) 瑪寇魯 (船上): areaidg4_5_1 ;; abandoned prison"
+    ],
+    [
+      "击杀怪物获取 (quest:教堂鑰匙)",
+      "找到 (img:checkpoint) (color:cc99ff)教堂, 激活 (quest:正義女神)",
+      "进入 (img:checkpoint) areaidg4_5_2 ;; solitary confinement"
+    ],
+    [
+      "击杀 (img:checkpoint) 囚犯 || 释放 (img:quest_2) 馬提奇",
+      "(img:quest_2) 瑪寇魯 (船上): areaidg4_7 ;; shrike island"
+    ],
+    [
+      "可选： (img:quest_2) (quest:撕碎的地圖碎片): (img:checkpoint) (color:cc99ff)corpse_nest",
+      "击杀 (img:checkpoint) 天之禍殃 || 释放 (img:quest_2) 馬提奇",
+      "(img:quest_2) 瑪寇魯 (船上): areaidg4_3_1 ;; whakapanu island"
+    ],
+    [
+      "可选： (img:support) 在 (img:checkpoint) (color:cc99ff)cavern || (img:quest_2) (quest:撕碎的地圖碎片): (img:checkpoint) (color:cc99ff)pirate",
+      "击杀 (img:checkpoint) shark || 释放 (img:quest_2) 馬提奇",
+      "(hint)__ opt: (color:cc99ff)unc._gem for (quest:fin) 在 areaidg4_11_1a ;; ngakanu",
+      "找到 & 进入 (img:checkpoint) areaidg4_3_2 ;; singing caverns"
+    ],
+    [
+      "可选： <all-res_amu>: 找到 (quest:pearl) 在 (img:checkpoint) (color:cc99ff)clam",
+      "可选： (img:support) 在 (img:checkpoint) (color:cc99ff)egg_cave: destroy eggs",
+      "击杀 (img:checkpoint)  死亡之謠．黛莫拉 || 释放 (img:quest_2) 馬提奇",
+      "(img:portal) to areaidg4_town ;; kingsmarch"
+    ],
+    [
+      "(img:quest_2) 黑衣幽魂",
+      "可选： (img:quest_2) 羅格: <珠光項鍊> 来自 (quest:嗡鳴珍珠)",
+      "可选： (img:quest_2) 瑪寇魯 (船上): areaidg4_13 (color:lime)(map) ;; plunder's point",
+      "(img:quest_2) 瑪寇魯 (船上): areaidg4_4_1 ;; eye of hinekora"
+    ],
+    [
+      "(img:quest_2) 馬提奇 || (img:quest_2) (color:cc99ff)水井 || 完成3个测试",
+      "(hint)__ (img:spirit): (color:cc99ff)瀑布 位于第2和第3个试炼之间",
+      "(img:quest_2) (color:lime)獻上敬意 在 (img:checkpoint) (color:cc99ff)沉默之廳 +5%魔力",
+      "(hint)__ 第3个试炼后的右侧通道",
+      "进入 (img:checkpoint) areaidg4_4_2 ;; halls of the dead"
+    ],
+    [
+      "完成 3 个 (img:checkpoint) (color:cc99ff)测试 获取 (quest:空白刺青)",
+      "(hint)__ (img:quest_2) 图腾: 转动 在 (quest:空白刺青)",
+      "击败 (img:checkpoint) (color:ff8111)白之亞瑪 for (quest:銀幣)",
+      "进入 areaidg4_4_3 ;; trial of the ancestors"
+    ],
+    [
+      "(img:quest_2) 娜瓦莉: (quest:悉妮蔻拉的刺青 +2天赋点)",
+      "(img:quest_2) 瑪寇魯 (船上): areaidg4_8b ;; arastas (hostile)"
+    ],
+    [
+      "跟随 (img:quest_2) 傳道士羅蘭迪斯 || 走到外面",
+      "可选： 3 崇高石 + 3 富豪石: 找到 2 (img:checkpoint) (color:cc99ff)黃金之鐘",
+      "击杀 救贖者之手．托維安（石头击中魔法师可打断强化） || 进入 areaidg4_10 ;; the excavation"
+    ],
+    [
+      "击杀 (img:checkpoint) 烏托邦的第一使者．本篤特斯 || 进入 the site",
+      "(img:quest_2) 黑衣幽魂 || (img:portal) to areaidg4_town ;; kingsmarch"
+    ],
+    [
+      "(img:quest_2) 拉卓里 (船上): areaidg4_11_1b ;; ngakanu"
+    ],
+    [
+      "高级 (img:jeweller) 在 (color:cc99ff)赛季机制 (?)",
+      "(hint)_ - 基于0.3赛季的推测",
+      "(hint)_ - 可能不是重复性奖励",
+      "进入 (img:checkpoint) areaidg4_11_2 ;; heart of the tribe"
+    ],
+    [
+      "击败 (color:ff8111) 酋長．塔瓦凱",
+      "(img:quest_2) 酋長．塔瓦凱 || (img:portal) 回家 areaidg4_town ;; kingsmarch"
+    ],
+    [
+      "(img:quest_2) 黑衣幽魂: (color:cc99ff)前往奧格姆",
+      "进入 areaidp1_town (img:town) ;; the refuge"
+    ]
+  ],
+  [
+    [
+      "(img:quest_2) 伦利",
+      "进入 areaidp1_1 ;; scorched farmlands"
+    ],
+    [
+      "可选： (img:skill) (color:cc99ff)路边的尸体",
+      "得到 the (img:checkpoint) 靠近 (color:cc99ff)黑暗之牆",
+      "击杀 两个女巫, 进入 (img:checkpoint) areaidp1_2 ;; stones of serle"
+    ],
+    [
+      "激活 6 (img:checkpoint) (color:cc99ff)巨石 || 击杀 迷霧之刃．希奧拉",
+      "(img:quest_2) 乌娜: (color:cc99ff)听到最后",
+      "返回 (img:checkpoint) areaidp1_1 ;; scorched farmlands"
+    ],
+    [
+      "(img:checkpoint) -传送至 (color:cc99ff)黑暗之墙",
+      "进入 (img:checkpoint) areaidp1_3 ;; the blackwood"
+    ],
+    [
+      "可选： 预兆 在 (color:cc99ff)幽暗徵兆",
+      "找到 & 进入 (img:checkpoint) areaidp1_4 ;; holten"
+    ],
+    [
+      "可选： (img:checkpoint) (color:cc99ff)碼頭工人之魂: 渡口码头 (中心)",
+      "(color:ff00ff)找到两个支线区域 (边缘) (edge): (img:in-out2), 然后 (img:arena)",
+      "(hint)_ - areaidp1_5: 击杀 恐懼典獄長．歐斯溫 得到 (quest:天赋书) ;; wolvenhold",
+      "(hint)_ - areaidp1_6: 击杀 沃夫里克領主 和 艾兒薇絲女士 ;; holten estate",
+      "after 2nd arena:fight, (img:portal) to areaidp1_town ;; the refuge"
+    ],
+    [
+      "(img:quest_2) 伦利",
+      "(img:quest_2) 黑衣幽魂: (color:cc99ff)前往瓦斯提里",
+      "进入 areaidp2_town ;; the khari bazaar"
+    ]
+  ],
+  [
+    [
+      "(img:quest_2) 絲克瑪．阿薩拉 || (img:quest_2) 札卡",
+      " (img:7) to areaidp2_1 ;; the khari crossing"
+    ],
+    [
+      " (img:7): (img:in-out2) areaidp2_5 激活 (img:waypoint) ;; galai gates",
+      "可选：(img:1): (img:checkpoint) (color:cc99ff)戒指/施法者商人",
+      " (img:1): 得到 (quest:熔岩者的禮物 +5%生命) 在 (img:arena) 骨顎階梯",
+      "(img:portal) 回家 areaidp2_town ;; khari bazaar"
+    ],
+    [
+      " (img:1) 去 areaidp2_1 ;; khari crossing"
+    ],
+    [
+      " (img:2), 击杀 (img:checkpoint) 最終之刺．艾克提 和 沙蟲．艾能德",
+      "(img:portal) 去 areaidp2_town ;; the khari bazaar"
+    ],
+    [
+      "(img:quest_2) 芮蘇: (quest:天赋书)",
+      " (img:5) 去 areaidp2_1 ;; the khari crossing"
+    ],
+    [
+      " (img:6) 去 (img:checkpoint) areaidp2_2 ;; pools of khatal"
+    ],
+    [
+      "进入 (img:checkpoint) areaidp2_3 ;; sel khari sanctuary"
+    ],
+    [
+      "可选： <戒指,护符,宝石>: 拾取 (quest:2个巨靈之幣)",
+      "(hint)__ 放入基座 (侧边边缘)",
+      "找到 & 击杀 (img:checkpoint) 眼鏡蛇領主．艾爾札拉",
+      "(img:quest_2) 絲克瑪．阿薩拉 || (img:portal) 回家 areaidp2_town ;; the khari bazaar"
+    ],
+    [
+      "(img:waypoint) 回家 areaidp2_5 ;; the galai gates"
+    ],
+    [
+      "击杀 (img:checkpoint) vornas || 进入 areaidp2_6 ;; qimah"
+    ],
+    [
+      "沿着边缘走到 (img:checkpoint) (color:cc99ff)奧爾巴拉的靈柱 (color:lime)(自选1个buff)",
+      "(hint)__ 通常在入口 (color:cc99ff)或出口附近",
+      "沿着边缘走到 (img:checkpoint) areaidp2_7 ;; qimah reservoir"
+    ],
+    [
+      "可选： 通货: 拾取 (quest:2个药瓶) 用于 2个 (img:checkpoint) (color:cc99ff)水井",
+      "击杀 (img:checkpoint) 法里登王子．亞茲馬迪 || (img:quest_2) 巨大巨灵之币",
+      "(img:quest_2) 賈多 || (img:portal) 回家 areaidp2_town ;; the khari bazaar"
+    ],
+    [
+      "(img:quest_2) 黑衣幽魂: (color:cc99ff)travel_to_kriar",
+      "进入 areaidp3_town (img:town) ;; the glade"
+    ]
+  ],
+  [
+    [
+      "(img:quest_2) 多里亞尼",
+      "进入 areaidp3_1 ;; ashen forest"
+    ],
+    [
+      "可选： (img:skill) 在 (img:checkpoint) (color:cc99ff)遠古紀念碑",
+      "进入 areaidp3_2 ;; kriar village"
+    ],
+    [
+      "击杀 (img:checkpoint) 迷失長鋒．萊塔拉 (quest:寶石殼顱骨 +40精魂和14级精魂宝石)",
+      "进入 areaidp3_3 ;; glacial tarn"
+    ],
+    [
+      "沿着 (color:cc99ff)低地边缘走",
+      "进入 (img:checkpoint) areaidp3_4 ;; howling caves"
+    ],
+    [
+      "击杀 (img:checkpoint) 怪異雪獸  for (quest:寒冰獠牙)",
+      "(img:portal) 回家 areaidp3_town ;; the glade"
+    ],
+    [
+      "(img:quest_2) 希爾妲: (quest:天赋书)",
+      "(img:waypoint) 传送至 areaidp3_3 ;; glacial tarn"
+    ],
+    [
+      "沿着 (color:cc99ff)高地边缘走",
+      "击杀 (img:checkpoint) rakkar, 进入 areaidp3_5 ;; kriar peaks"
+    ],
+    [
+      "可选： (color:ff8111)免費的傳奇物品 来自 (img:quest_2) 長老馬朵克斯",
+      "(hint)__ 沿着边缘的长通道",
+      "进入 (img:checkpoint) areaidp3_6 ;; etched ravine"
+    ],
+    [
+      "击杀 守護者．風暴血獸",
+      "进入 areaidp3_7 ;; the cuachic vault"
+    ],
+    [
+      "击杀 (img:checkpoint) 鮮血女祭司．澤莉娜 和 鮮血祭司．佐林",
+      "(img:quest_2) 多里亞尼 || (img:checkpoint) 返回第四章",
+      "(img:waypoint) 传送回 areaidg4_town (img:town) ;; kingsmarch"
+    ],
+    [
+      "(img:quest_2) 黑衣幽魂: (quest:天赋书)",
+      "(img:quest_2) 黑衣幽魂: (color:cc99ff)前往奧瑞亞",
+      "进入 areaidg_endgame_town ;; the ziggurat refuge"
+    ],
+    [
+      "(img:quest_2) 艾瓦 || (img:quest_2) 多里亞尼",
+      "使用 (color:cc99ff)地图装置完成一次异界即可回藏身处",
+      "<剧情引导结束>"
+    ]
+  ]
+]
